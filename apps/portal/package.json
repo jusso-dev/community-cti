@@ -6,9 +6,20 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "node --test dist/"
+    "build": "tsc -p tsconfig.lib.json && next build && node scripts/strip-client-scripts.mjs",
+    "typecheck": "tsc -p tsconfig.lib.json --noEmit",
+    "test": "node ../../scripts/test-dist.mjs"
   },
-  "dependencies": {"@community-cti/schema": "workspace:*"}
+  "dependencies": {
+    "@community-cti/schema": "workspace:*",
+    "next": "^14.2.25",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "axe-core": "^4.10.3",
+    "jsdom": "^26.1.0"
+  }
 }

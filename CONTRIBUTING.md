@@ -15,7 +15,13 @@ corepack enable
 pnpm install
 pnpm build
 pnpm test
+pnpm test:isolation
+pnpm test:redteam
+pnpm eval
+pnpm metrics:pilot
 ```
+
+`pnpm test:isolation` checks that each API route has a case and that one organisation cannot read another's rows. `pnpm test:redteam` runs the agent fixture set. `pnpm eval` uses a scripted model and does not mean agents are cleared to launch. `pnpm metrics:pilot` prints the event names and states that the pilot has not been run.
 
 ## Pull requests
 - Link the issue and tick its acceptance criteria.

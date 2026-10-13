@@ -116,11 +116,17 @@ Option 3, delivered incrementally: a credible, reusable intelligence engine bene
 ## Repository layout
 
 ```
-apps/api            HTTP API (tenant-scoped)
-apps/portal         Community portal (placeholder)
-packages/schema     Finding, provenance and confidence model
-packages/collectors Deterministic collector contracts
-docs/               Architecture, governance, sources, threat model, ADRs, CI templates
+apps/api            HTTP API (Node http handler, tenant-scoped)
+apps/portal         Next.js community portal
+packages/schema     Finding, provenance, confidence and STIX helpers
+packages/db         Migrations, row-level security and audit
+packages/collectors Deterministic collectors
+packages/intel      Matching, scoring and enrichment
+packages/notify     Plain-English alerts
+packages/agents     Read-only investigator and analyst agents
+packages/integrations Microsoft 365 token sealing
+docs/               Architecture, governance, sources, threat model, ADRs
+infra/              Local Docker Compose stack
 ```
 
 ## Getting started
@@ -132,7 +138,25 @@ pnpm build
 pnpm test
 ```
 
-CI templates live in [docs/ci/](docs/ci/) until they can be moved into `.github/workflows/`.
+### Local services
+
+Postgres 16, OpenSearch 2, and MinIO for local development:
+
+```bash
+bash scripts/dev-up.sh
+```
+
+On Windows:
+
+```powershell
+powershell -File scripts/dev-up.ps1
+```
+
+Postgres listens on port 5432, OpenSearch on port 9200, and MinIO on ports 9000 and 9001. The security plugin on OpenSearch is disabled for this local stack only. An init container creates the `evidence` bucket. Connection defaults are in `.env.example`. They are local passwords, not production secrets.
+
+Stop the stack with `bash scripts/dev-down.sh` or `powershell -File scripts/dev-down.ps1`.
+
+CI runs from [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
 ## Roadmap
 

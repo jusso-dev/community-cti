@@ -27,4 +27,18 @@ Custom tenant-scoped app (C) for findings and portal, with MISP used internally 
 Tenant isolation, operating cost per month, STIX 2.1 fidelity, connector coverage for AU-relevant sources, licence compatibility with Apache-2.0, team skills, sharing-group support.
 
 ## Decision
-Not yet made. Tracked in the `needs-decision` issue for this ADR. Phase 1 code keeps a `IntelStore` interface in `packages/schema` so either backend can be plugged in.
+Not yet made. Tracked in the `needs-decision` issue for this ADR. Phase 1 code keeps an `IntelStore` interface in `packages/schema` so either backend can be plugged in. Justin Middler is the decision owner. This ADR stays **Proposed**.
+
+## Desk review (2026-10-13)
+
+This is not a spike result. OpenCTI and MISP were not deployed. The machine used for this review had no local Docker daemon, and the shared homelab Docker engine was not used. No RAM, CPU, or setup time was measured. No cloud quote was collected. The figures below are not measurements and not prices.
+
+| Option | What was run | RAM | Setup time | Monthly cost AUD |
+|---|---|---|---|---|
+| OpenCTI | Not deployed | Not measured | Not measured | Not quoted |
+| MISP | Not deployed | Not measured | Not measured | Not quoted |
+| Custom PostgreSQL and OpenSearch | Compose file only (`infra/docker-compose.yml`). It was not started. | OpenSearch heap in that file is 512 MB. Host RAM was not measured. | Not measured | Not quoted |
+
+Published docs for OpenCTI describe a heavier stack (OpenSearch or Elasticsearch, Redis, RabbitMQ, MinIO, and workers) than the custom compose file. MISP is lighter and its sharing groups match opt-in distribution more closely than OpenCTI's organisation model. Neither point was checked by running the software here.
+
+Recommendation to record, not a decision: keep findings in the custom PostgreSQL store behind `IntelStore` for Phase 1, and revisit MISP when the community governance group endorses sharing. Do not treat this paragraph as acceptance of ADR 0001.

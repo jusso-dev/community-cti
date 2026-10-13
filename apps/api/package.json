@@ -8,7 +8,15 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "node --test dist/"
+    "test": "node ../../scripts/test-dist.mjs"
   },
-  "dependencies": {"@community-cti/schema": "workspace:*"}
+  "dependencies": {
+    "@community-cti/agents": "workspace:*",
+    "@community-cti/collectors": "workspace:*",
+    "@community-cti/db": "workspace:*",
+    "@community-cti/integrations": "workspace:*",
+    "@community-cti/intel": "workspace:*",
+    "@community-cti/notify": "workspace:*",
+    "@community-cti/schema": "workspace:*"
+  }
 }
