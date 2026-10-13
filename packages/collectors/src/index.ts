@@ -18,3 +18,7 @@ export function lookalikeCandidates(domain: string): string[] {
   out.delete(domain);
   return [...out];
 }
+
+export { assertNoPasswordMaterial, lookupHibpDomain, sanitiseBreachRecord } from "./sources.js";
+export { parseSourcesMarkdown, type SourceMarkdownRow } from "./sync.js";
+export { MemoryObservationStore, registerSchedules, runCollector, type ObservationStore, type RunResult } from "./runner.js";

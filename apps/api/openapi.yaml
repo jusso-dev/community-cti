@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: Community CTI API
+  version: "0.0.0"
+  description: Tenant scoped HTTP API. Australian English. Sharing stays off until governance endorsement.
+paths:
+  /healthz:
+    get:
+      operationId: healthz
+  /auth/magic-link:
+    post:
+      operationId: magic-link
+  /auth/callback:
+    get:
+      operationId: callback
+  /orgs:
+    post:
+      operationId: create-org
+  /orgs/{id}/invites:
+    post:
+      operationId: invite
+  /orgs/{id}/consents:
+    post:
+      operationId: consent
+  /orgs/{id}/members/{userId}/role:
+    post:
+      operationId: change-role
+  /domains:
+    post:
+      operationId: add-domain
+  /domains/{id}/check:
+    post:
+      operationId: check-domain
+  /domains/{id}/email:
+    post:
+      operationId: email-domain
+  /domains/verify-email:
+    get:
+      operationId: verify-email
+  /findings:
+    get:
+      operationId: list-findings
+  /findings/{id}:
+    get:
+      operationId: get-finding
+  /findings/{id}/evidence/{evidenceId}:
+    get:
+      operationId: evidence
+  /findings/{id}/dismiss:
+    post:
+      operationId: dismiss
+  /findings/{id}/challenge:
+    post:
+      operationId: challenge
+  /findings/{id}/reopen:
+    post:
+      operationId: reopen
+  /findings/{id}/notify:
+    post:
+      operationId: notify
+  /credentials:
+    get:
+      operationId: credentials
+  /credentials/sync:
+    post:
+      operationId: credentials-sync
+  /exposures/correlate:
+    post:
+      operationId: exposures
+  /actions:
+    post:
+      operationId: create-action
+  /actions/{id}/approve:
+    post:
+      operationId: approve-action
+  /actions/{id}/execute:
+    post:
+      operationId: execute-action
+  /review:
+    get:
+      operationId: review
+  /review/weights:
+    post:
+      operationId: review-weights
+  /integrations/m365/scopes:
+    get:
+      operationId: m365-scopes
+  /integrations/m365/connect:
+    post:
+      operationId: m365-connect
+  /share:
+    post:
+      operationId: share
+  /cost:
+    post:
+      operationId: cost
+  /agents/investigate:
+    post:
+      operationId: investigate

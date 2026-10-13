@@ -1,4 +1,4 @@
-# Template. Move to .github/workflows/ci.yml once a token with the workflow scope is available.
+# Copy of .github/workflows/ci.yml. Edit the workflow, then keep this file in step.
 name: ci
 on:
   push:
@@ -17,3 +17,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - run: pnpm test
+      - run: pnpm test:isolation
+      - run: pnpm test:redteam
+      - run: pnpm eval
+      - run: pnpm metrics:pilot

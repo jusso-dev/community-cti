@@ -5,7 +5,12 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "db:migrate": "pnpm --filter @community-cti/db migrate",
+    "test:isolation": "pnpm --filter @community-cti/api exec node --test dist/isolation.test.js",
+    "test:redteam": "pnpm --filter @community-cti/agents exec node --test dist/redteam.test.js",
+    "eval": "pnpm --filter @community-cti/agents exec node dist/eval.js",
+    "metrics:pilot": "node scripts/metrics-pilot.mjs"
   },
   "devDependencies": {
     "typescript": "^5.6.0",
