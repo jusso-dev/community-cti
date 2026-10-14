@@ -1,0 +1,16 @@
+{
+  "name": "@community-cti/eval",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json && node --test 'dist/**/*.test.js'",
+    "eval": "node dist/run.js",
+    "metrics": "node dist/pilot.js"
+  },
+  "dependencies": {}
+}

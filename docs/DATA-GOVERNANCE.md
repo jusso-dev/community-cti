@@ -44,4 +44,4 @@ Aboriginal and Torres Strait Islander people have the right to exercise control 
 
 | Id | Service | Data categories | Region | Reason | Safeguards | Approved by | Date |
 |---|---|---|---|---|---|---|---|
-| (none yet) | | | | | | | |
+| TS-1 | ThreatSieve TAXII read | Shared STIX only. No tenant findings, credentials, or cultural data | Cloudflare global, read path | ThreatSieve is the intelligence source and this read is not pinned to an Australian region | Allow-listed https host, `intel:read` bearer key, empty request body, sightings dropped, tenant data stays in the Australian database | Justin Middler | 2026-10-14 |

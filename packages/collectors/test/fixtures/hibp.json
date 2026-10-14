@@ -1,0 +1,15 @@
+[
+  {
+    "email": "person@example.org.au",
+    "Password": "hunter2",
+    "password_hash": "abc123hash",
+    "breaches": [
+      {
+        "Name": "ExampleBreach",
+        "BreachDate": "2020-01-01",
+        "DataClasses": ["Email addresses", "Passwords"],
+        "Password": "hunter2"
+      }
+    ]
+  }
+]

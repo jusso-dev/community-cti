@@ -20,6 +20,7 @@ Every collector must have a row here before it is merged. "Status" is one of `ca
 | `shodan` | Shodan | Exposure | Commercial terms | To verify | Paid | Global | Restricted | API | candidate | | Exposed services |
 | `censys` | Censys | Exposure | Commercial / research terms | To verify | Free tier / paid | Global | Restricted | API | candidate | | |
 | `otx` | AlienVault OTX | IOC | Check terms | To verify | Free | Global | Varies | API | candidate | | |
+| `threatsieve` | ThreatSieve TAXII 2.1 | Shared STIX | Per-object source licence inside ThreatSieve | Read-only shared intel | Existing ThreatSieve deployment | Indicators, actors, campaigns, vulnerabilities | TLP of the published collection | TAXII 2.1 bearer, allow-listed host | approved | Justin Middler | ADR 0001. No tenant payload is sent. Sightings are dropped. |
 | `misp-feeds` | MISP default OSINT feeds | IOC | Per feed | Per feed | Free | Global | Per feed | MISP | candidate | | |
 | `stealer-logs` | Stealer log datasets | Credential | n/a | n/a | n/a | n/a | n/a | n/a | blocked | | Deferred: blocked on lawful access and procedures |
 | `underground` | Underground forums and markets | Cybercrime | n/a | n/a | n/a | n/a | n/a | n/a | blocked | | Deferred: blocked on lawful access and procedures |

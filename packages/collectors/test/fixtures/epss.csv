@@ -1,0 +1,3 @@
+# EPSS fixture
+cve,epss,percentile
+CVE-2024-12345,0.42,0.91

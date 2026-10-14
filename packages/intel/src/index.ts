@@ -1,0 +1,10 @@
+export { buildMatcher, type CertMatch, type LookalikeMatcher, type WatchedDomain } from "./lookalike/matcher.js";
+export { foldHomoglyphs } from "./lookalike/homoglyph.js";
+export { isPrivateAddress, safeFetch, type SafeFetchResult } from "./enrich/ssrf.js";
+export { enrichDomain, enrichmentAllowed, isParked, type Enrichment } from "./enrich/enrich.js";
+export { mmh3 } from "./enrich/mmh3.js";
+export { scoreLookalike, scoreRansomware, jaroWinkler, type LookalikeSignals, type Score } from "./match/score.js";
+export { precisionFixtures, precisionAt } from "./match/precision.js";
+export { discoverAssets, isUnderVerifiedDomain, type Asset } from "./assets/discover.js";
+export { correlateExposure, type ExposureFinding } from "./exposure/correlate.js";
+export { sanitiseWarning, decideShare, defaultSharingPreferences, communityFinding } from "./share/sanitise.js";

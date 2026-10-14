@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  title: Community CTI API
+  version: 0.0.0
+  description: Tenant-scoped findings, onboarding and approval-based actions.
+paths:
+  /healthz:
+    get:
+      summary: Health check
+  /auth/magic-link:
+    post:
+      summary: Email a sign-in link
+  /auth/callback:
+    get:
+      summary: Complete sign-in
+  /orgs:
+    post:
+      summary: Create an organisation
+  /orgs/{id}/consents:
+    post:
+      summary: Record consent for domain monitoring
+  /domains:
+    post:
+      summary: Start domain verification
+  /domains/{id}/check:
+    post:
+      summary: Check the DNS TXT record
+  /findings:
+    get:
+      summary: List findings for the current organisation
+  /findings/{id}:
+    get:
+      summary: Show one finding with provenance, confidence and evidence
+  /findings/{id}/dismiss:
+    post:
+      summary: Dismiss a finding with a reason
+  /findings/{id}/challenge:
+    post:
+      summary: Challenge a finding
+  /findings/{id}/reopen:
+    post:
+      summary: Reopen a finding
+  /actions/{id}/approve:
+    post:
+      summary: Approve a proposed action
+  /review:
+    get:
+      summary: Analyst review queue
+  /credential-exposures/{id}:
+    get:
+      summary: View a credential exposure record
+  /sharing/{id}/approve:
+    post:
+      summary: Approve one sanitised community warning

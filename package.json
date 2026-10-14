@@ -5,10 +5,16 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "test:isolation": "pnpm --filter @community-cti/db exec tsc -p tsconfig.json && pnpm --filter @community-cti/db exec node --test --test-name-pattern=isolation 'dist/**/*.test.js' && pnpm --filter @community-cti/schema exec tsc -p tsconfig.json && pnpm --filter @community-cti/schema exec node --test --test-name-pattern=isolation 'dist/**/*.test.js' && pnpm --filter @community-cti/api exec tsc -p tsconfig.json && pnpm --filter @community-cti/api exec node --test --test-name-pattern=isolation 'dist/**/*.test.js'",
+    "test:redteam": "pnpm --filter @community-cti/agents exec tsc -p tsconfig.json && pnpm --filter @community-cti/agents exec node --test --test-name-pattern=redteam 'dist/**/*.test.js'",
+    "eval": "pnpm --filter @community-cti/eval build && pnpm --filter @community-cti/eval eval",
+    "metrics:pilot": "pnpm --filter @community-cti/eval build && pnpm --filter @community-cti/eval metrics",
+    "db:migrate": "pnpm --filter @community-cti/db migrate"
   },
   "devDependencies": {
     "typescript": "^5.6.0",
-    "@types/node": "^22.7.0"
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.2"
   }
 }

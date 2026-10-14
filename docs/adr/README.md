@@ -8,3 +8,4 @@
 | [0004](0004-stix-2-1-data-model.md) | STIX 2.1 as the data model | Accepted |
 | [0005](0005-australian-hosting.md) | Australian hosting and data residency | Accepted |
 | [0006](0006-agent-boundaries.md) | Agent boundaries and human approval | Accepted |
+| [0007](0007-auth.md) | Magic-link sessions | Accepted |

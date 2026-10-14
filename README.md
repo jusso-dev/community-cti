@@ -117,10 +117,16 @@ Option 3, delivered incrementally: a credible, reusable intelligence engine bene
 
 ```
 apps/api            HTTP API (tenant-scoped)
-apps/portal         Community portal (placeholder)
-packages/schema     Finding, provenance and confidence model
-packages/collectors Deterministic collector contracts
-docs/               Architecture, governance, sources, threat model, ADRs, CI templates
+apps/portal         Accessible findings pages
+packages/schema     Finding model, STIX builders and IntelStore
+packages/db         Migrations, row-level security and PostgreSQL IntelStore
+packages/collectors Deterministic collectors
+packages/intel      Matching, enrichment and sharing rules
+packages/notify     Plain-English email alerts
+packages/agents     Read-only investigator and analyst runtime
+packages/integrations  Microsoft 365 and approved actions
+packages/eval       Synthetic evaluation metrics
+docs/               Architecture, governance, sources, threat model, ADRs
 ```
 
 ## Getting started
@@ -130,6 +136,29 @@ corepack enable
 pnpm install
 pnpm build
 pnpm test
+```
+
+### Local services
+
+`scripts/dev-up.sh` starts PostgreSQL 16, OpenSearch 2 and MinIO for local development. Copy `.env.example` to `.env` if you want the local defaults in your shell. Those values are development defaults only.
+
+```bash
+bash scripts/dev-up.sh
+docker compose -f infra/docker-compose.yml ps
+psql postgres://cti:cti@localhost:5433/cti -c 'select 1'
+curl localhost:9200
+bash scripts/dev-down.sh
+```
+
+OpenSearch security is disabled in this local file only. Production data stays in an Australian region. See [docs/adr/0005-australian-hosting.md](docs/adr/0005-australian-hosting.md).
+
+Useful checks:
+
+```bash
+pnpm test:isolation
+pnpm test:redteam
+pnpm eval
+pnpm metrics:pilot
 ```
 
 CI templates live in [docs/ci/](docs/ci/) until they can be moved into `.github/workflows/`.

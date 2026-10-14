@@ -8,7 +8,12 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "node --test dist/"
+    "test": "tsc -p tsconfig.json && node --test 'dist/**/*.test.js'"
   },
-  "dependencies": {"@community-cti/schema": "workspace:*"}
+  "dependencies": {"@community-cti/schema": "workspace:*"},
+  "devDependencies": {
+    "axe-core": "^4.10.2",
+    "jsdom": "^25.0.1",
+    "@types/jsdom": "^21.1.7"
+  }
 }

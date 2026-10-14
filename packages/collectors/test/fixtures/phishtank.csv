@@ -1,0 +1,2 @@
+phish_id,url,phish_detail_url,submission_time,verified
+1,https://bank-login.example/sign-in,https://www.phishtank.com/phish_detail.php?phish_id=1,2026-10-01,yes

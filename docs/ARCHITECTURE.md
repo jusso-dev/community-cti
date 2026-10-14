@@ -21,7 +21,7 @@ flowchart TD
 Deterministic collectors (`packages/collectors`) ingest OSINT, licensed feeds, breach signals, ransomware reporting and domain intelligence. Every record keeps provenance: source id (from [SOURCES.md](SOURCES.md)), source terms, collection timestamp, confidence and access restriction (TLP). Collectors never call a language model.
 
 ### Intelligence graph
-STIX 2.1 objects ([ADR 0004](adr/0004-stix-2-1-data-model.md)) stored in PostgreSQL, with OpenSearch for full-text and indicator search and S3-compatible object storage for raw evidence. Whether OpenCTI or MISP sits underneath is an open decision ([ADR 0001](adr/0001-opencti-vs-misp-vs-custom.md)).
+STIX 2.1 objects ([ADR 0004](adr/0004-stix-2-1-data-model.md)) stored in PostgreSQL, with OpenSearch for full-text and indicator search and S3-compatible object storage for raw evidence. Shared intelligence is read from [ThreatSieve](https://github.com/jusso-dev/ThreatSieve) over TAXII 2.1 ([ADR 0001](adr/0001-opencti-vs-misp-vs-custom.md)). Tenant findings stay in this database and are not written back.
 
 ### Agent layer ([ADR 0006](adr/0006-agent-boundaries.md))
 - **Collector agents:** coordinate ingestion, extraction, normalisation and deduplication. Mostly conventional code.

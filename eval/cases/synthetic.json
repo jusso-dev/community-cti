@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "case-000",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample0.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-001",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample1.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-002",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample2.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-003",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample3.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-004",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample4.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-005",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample5.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-006",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample6.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-007",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample7.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-008",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample8.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-009",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample9.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-010",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample10.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-011",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample11.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-012",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample12.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-013",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample13.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-014",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample14.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-015",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample15.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-016",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample16.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-017",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample17.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-018",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample18.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-019",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample19.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-020",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample20.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-021",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample21.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-022",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample22.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-023",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample23.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-024",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample24.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-025",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample25.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-026",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample26.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-027",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample27.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-028",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample28.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-029",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample29.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-030",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample30.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-031",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample31.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-032",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample32.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-033",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample33.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-034",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample34.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-035",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample35.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-036",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample36.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-037",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample37.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-038",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample38.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-039",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample39.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-040",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample40.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-041",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample41.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-042",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample42.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-043",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample43.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-044",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample44.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-045",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample45.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-046",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample46.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-047",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample47.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-048",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample48.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-049",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample49.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-050",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample50.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-051",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample51.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-052",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample52.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-053",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample53.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-054",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample54.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-055",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample55.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-056",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample56.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-057",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample57.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-058",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample58.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-059",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample59.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-060",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample60.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-061",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample61.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-062",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample62.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-063",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample63.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-064",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample64.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-065",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample65.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-066",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample66.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-067",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample67.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-068",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample68.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-069",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample69.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-070",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample70.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-071",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample71.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-072",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample72.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-073",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample73.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-074",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample74.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-075",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample75.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-076",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample76.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-077",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample77.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-078",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample78.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-079",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample79.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-080",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample80.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-081",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample81.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-082",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample82.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-083",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample83.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-084",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample84.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-085",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample85.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-086",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample86.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-087",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample87.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-088",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample88.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-089",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample89.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-090",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample90.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-091",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample91.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-092",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample92.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-093",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample93.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-094",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample94.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-095",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample95.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-096",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample96.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-097",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample97.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-098",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample98.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-099",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample99.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-100",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample100.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-101",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample101.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-102",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample102.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-103",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample103.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-104",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample104.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-105",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample105.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-106",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample106.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-107",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample107.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-108",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample108.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-109",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample109.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-110",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample110.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-111",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample111.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-112",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample112.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-113",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample113.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-114",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample114.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-115",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample115.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-116",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample116.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-117",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample117.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-118",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample118.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-119",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample119.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-120",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample120.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-121",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample121.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-122",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample122.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-123",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample123.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-124",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample124.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-125",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample125.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-126",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample126.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-127",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample127.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-128",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample128.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-129",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample129.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-130",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample130.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-131",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample131.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-132",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample132.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-133",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample133.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-134",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample134.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-135",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample135.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-136",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample136.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-137",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample137.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-138",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample138.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-139",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample139.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-140",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample140.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-141",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample141.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-142",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample142.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-143",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample143.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-144",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample144.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-145",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample145.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-146",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample146.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-147",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample147.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-148",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample148.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-149",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample149.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-150",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample150.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-151",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample151.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-152",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample152.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-153",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample153.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-154",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample154.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-155",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample155.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-156",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample156.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-157",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample157.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-158",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample158.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-159",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample159.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-160",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample160.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-161",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample161.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-162",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample162.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-163",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample163.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-164",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample164.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-165",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample165.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-166",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample166.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-167",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample167.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-168",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample168.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-169",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample169.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-170",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample170.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-171",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample171.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-172",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample172.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-173",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample173.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-174",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample174.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-175",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample175.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-176",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample176.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-177",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample177.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-178",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample178.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-179",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample179.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-180",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample180.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-181",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample181.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-182",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample182.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-183",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample183.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-184",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample184.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-185",
+    "kind": "ransomware_mention",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample185.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-186",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample186.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-187",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample187.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-188",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample188.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-189",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample189.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-190",
+    "kind": "phishing_campaign",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample190.example.org.au",
+    "confidence": 45
+  },
+  {
+    "id": "case-191",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample191.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-192",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample192.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-193",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample193.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-194",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample194.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-195",
+    "kind": "lookalike_domain",
+    "label": false,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample195.example.org.au",
+    "confidence": 15
+  },
+  {
+    "id": "case-196",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample196.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-197",
+    "kind": "ransomware_mention",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample197.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-198",
+    "kind": "lookalike_domain",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample198.example.org.au",
+    "confidence": 60
+  },
+  {
+    "id": "case-199",
+    "kind": "phishing_campaign",
+    "label": true,
+    "personalData": false,
+    "organisation": "Sample Community Service",
+    "domain": "sample199.example.org.au",
+    "confidence": 60
+  }
+]

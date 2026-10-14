@@ -1,0 +1,11 @@
+[
+  {
+    "victim": "Example Land Council",
+    "group": "ExampleGroup",
+    "published": "2026-10-14T00:00:00.000Z",
+    "country": "AU",
+    "description": "A land council was named in public reporting.",
+    "leak_url": "http://example-leak.onion/post/1",
+    "download": "http://example-leak.onion/file.zip"
+  }
+]

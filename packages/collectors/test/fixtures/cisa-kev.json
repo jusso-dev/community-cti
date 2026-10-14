@@ -1,0 +1,17 @@
+{
+  "title": "CISA KEV fixture",
+  "catalogVersion": "2026.10.14",
+  "vulnerabilities": [
+    {
+      "cveID": "CVE-2024-12345",
+      "vendorProject": "Example",
+      "product": "Widget",
+      "vulnerabilityName": "Example widget flaw",
+      "dateAdded": "2026-10-01",
+      "shortDescription": "An example flaw used only in tests.",
+      "requiredAction": "Apply the vendor update.",
+      "dueDate": "2026-10-20",
+      "knownRansomwareCampaignUse": "Known"
+    }
+  ]
+}

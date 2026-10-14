@@ -15,7 +15,11 @@ corepack enable
 pnpm install
 pnpm build
 pnpm test
+pnpm test:isolation
+pnpm test:redteam
 ```
+
+`pnpm test:isolation` checks that tenant A cannot read tenant B. The Postgres check skips cleanly when the database is down. `pnpm test:redteam` runs the prompt-injection fixtures. Collectors must not import a language model SDK.
 
 ## Pull requests
 - Link the issue and tick its acceptance criteria.

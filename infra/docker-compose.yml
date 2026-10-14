@@ -1,0 +1,81 @@
+# Local development only. Production data stays in an Australian region
+# (see docs/adr/0005-australian-hosting.md). OpenSearch security is disabled
+# here so contributors can run without extra certificates. Do not copy that
+# setting into production.
+
+name: community-cti
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: cti
+      POSTGRES_PASSWORD: cti
+      POSTGRES_DB: cti
+    ports:
+      # Host 5432 is often a local Postgres. Publish on 5433 so this stack can start beside it.
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cti -d cti"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  opensearch:
+    image: opensearchproject/opensearch:2
+    environment:
+      - discovery.type=single-node
+      - DISABLE_SECURITY_PLUGIN=true
+      - plugins.security.disabled=true
+      - bootstrap.memory_lock=false
+      - OPENSEARCH_JAVA_OPTS=-Xms256m -Xmx256m
+    ports:
+      - "9200:9200"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f localhost:9200"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  minio:
+    image: minio/minio:latest
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: cti
+      MINIO_ROOT_PASSWORD: cticticti
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - "mc alias set local http://minio:9000 cti cticticti && mc mb -p local/evidence || true"
+    restart: "no"
+
+volumes:
+  pgdata:
+  miniodata:
