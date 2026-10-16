@@ -147,12 +147,14 @@ const openphish: FeedDefinition = {
   },
 };
 
-const NVD_FIRST_WINDOW_MS = 7 * 86_400_000;
+const NVD_FIRST_WINDOW_MS = 86_400_000;
 /** The next window starts an hour before the last success, so changes made during a run are not missed. */
 const NVD_OVERLAP_MS = 3_600_000;
-const NVD_MAX_PAGES = 50;
+const NVD_MAX_PAGES = 100;
+/** NVD answers slowly: a 2000-row page took 111 s live, a 500-row page 62 s. Small pages keep each request well inside the timeout. */
+const NVD_PAGE_SIZE = 500;
 
-/** NVD CVE API 2.0 by lastModified window, paged at 2000, paced by nvdLimit. The key goes in the apiKey header only. */
+/** NVD CVE API 2.0 by lastModified window, paged at 500, paced by nvdLimit. The key goes in the apiKey header only. */
 const nvd: FeedDefinition = {
   id: "nvd",
   everyMs: 2 * 3_600_000,
@@ -169,13 +171,12 @@ const nvd: FeedDefinition = {
     for (let page = 0; page < NVD_MAX_PAGES; page++) {
       for (let delay = limiter.delayForNext(); delay > 0; delay = limiter.delayForNext()) await ctx.sleep(delay);
       const { body } = await fetchFeed({
-        url: nvdPageUrl(start, end, index),
+        url: nvdPageUrl(start, end, index, NVD_PAGE_SIZE),
         allow: ["https://services.nvd.nist.gov/"],
         headers,
         userAgent: ctx.config.userAgent,
         fetchImpl: ctx.fetchImpl,
         sleep: ctx.sleep,
-        // NVD answers slowly: a 2000-row page took 111 s live, a 500-row page 62 s.
         timeoutMs: 180_000,
       });
       const feed = JSON.parse(body.toString("utf8")) as NvdFeed;

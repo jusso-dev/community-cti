@@ -210,8 +210,9 @@ test("nvd pages a lastModified window, sends the key as a header and paces reque
   const items = await nvd.load(ctx, NOW, null);
   assert.equal(items.length, 2);
   assert.deepEqual(urls.map((url) => url.searchParams.get("startIndex")), ["0", "1"]);
-  assert.equal(urls[0]!.searchParams.get("lastModStartDate"), "2026-10-09T00:00:00.000Z");
+  assert.equal(urls[0]!.searchParams.get("lastModStartDate"), "2026-10-15T00:00:00.000Z", "first run looks back one day");
   assert.equal(urls[0]!.searchParams.get("lastModEndDate"), NOW.toISOString());
+  assert.equal(urls[0]!.searchParams.get("resultsPerPage"), "500", "small pages keep slow NVD responses inside the timeout");
   assert.equal(urls[0]!.searchParams.has("apiKey"), false);
   assert.deepEqual(keys, ["test-key", "test-key"]);
   assert.equal(items[0]!.record.cveID, "CVE-2023-32233");
