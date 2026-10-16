@@ -1,0 +1,26 @@
+{
+  "name": "@community-cti/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json && node --test 'dist/**/*.test.js'",
+    "start": "START_WORKER=1 node dist/index.js",
+    "run-once": "RUN_ONCE=1 node dist/index.js"
+  },
+  "dependencies": {
+    "@community-cti/collectors": "workspace:*",
+    "@community-cti/db": "workspace:*",
+    "@community-cti/intel": "workspace:*",
+    "@community-cti/notify": "workspace:*",
+    "@community-cti/schema": "workspace:*",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10"
+  }
+}

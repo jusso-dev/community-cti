@@ -1,0 +1,11 @@
+################################################################
+# abuse.ch URLhaus Database Dump (CSV - recent URLs only)      #
+# Last updated: 2026-10-16 02:30:29 (UTC)                      #
+#                                                              #
+# Terms Of Use: https://urlhaus.abuse.ch/api/                  #
+# For questions please contact urlhaus [at] abuse.ch           #
+################################################################
+#
+# id,dateadded,url,url_status,last_online,threat,tags,urlhaus_link,reporter
+"3950746","2026-10-16 02:30:29","http://192.0.2.10:33099/bin.sh","online","2026-10-16 02:30:29","malware_download","32-bit,elf,mips,Mozi","https://urlhaus.abuse.ch/url/3950746/","example_reporter"
+"3950745","2026-10-16 02:21:18","https://login.examp1e-council.example/x?utm_source=mail","online","2026-10-16 02:21:18","malware_download","None","https://urlhaus.abuse.ch/url/3950745/","example_reporter"

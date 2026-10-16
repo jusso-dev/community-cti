@@ -12,10 +12,15 @@
   },
   "dependencies": {
     "@community-cti/agents": "workspace:*",
+    "@community-cti/collectors": "workspace:*",
     "@community-cti/db": "workspace:*",
     "@community-cti/integrations": "workspace:*",
     "@community-cti/intel": "workspace:*",
     "@community-cti/notify": "workspace:*",
-    "@community-cti/schema": "workspace:*"
+    "@community-cti/schema": "workspace:*",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10"
   }
 }

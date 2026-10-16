@@ -10,5 +10,11 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "tsc -p tsconfig.json && node --test 'dist/**/*.test.js'"
   },
-  "dependencies": { "@community-cti/schema": "workspace:*" }
+  "dependencies": {
+    "@community-cti/schema": "workspace:*",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.17"
+  }
 }

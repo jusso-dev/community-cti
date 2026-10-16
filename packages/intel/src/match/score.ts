@@ -8,6 +8,8 @@ export interface LookalikeSignals {
   registeredDaysAgo: number | null;
   faviconMatch: boolean;
   parked: boolean;
+  /** Same name as a verified domain under a different ending, for example .com.au instead of .org.au. */
+  tldSwap?: boolean;
 }
 
 export interface Score {
@@ -28,6 +30,7 @@ export function scoreLookalike(signals: LookalikeSignals): Score {
   };
   if (signals.editDistance === 1) add("edit_distance_1", 25, "The name is one change away from your domain.");
   if (signals.homoglyph) add("homoglyph", 25, "The name uses characters that look like yours.");
+  if (signals.tldSwap) add("tld_swap", 25, "It is the same name as yours with a different ending.");
   if (signals.hasMx) add("has_mx", 15, "The site can send email.");
   if (signals.resolves) add("resolves", 10, "The name points at a website.");
   if (signals.registeredDaysAgo !== null && signals.registeredDaysAgo < 30) {

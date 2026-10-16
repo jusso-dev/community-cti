@@ -13,12 +13,18 @@ paths:
   /auth/callback:
     get:
       summary: Complete sign-in
+  /me:
+    get:
+      summary: Current user, active organisation, role and consent state
   /orgs:
     post:
       summary: Create an organisation
   /orgs/{id}/consents:
     post:
       summary: Record consent for domain monitoring
+  /orgs/{id}/consents/revoke:
+    post:
+      summary: Stop domain monitoring by withdrawing consent
   /domains:
     post:
       summary: Start domain verification

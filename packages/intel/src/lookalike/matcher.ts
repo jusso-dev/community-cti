@@ -1,5 +1,7 @@
+import { domainToUnicode } from "node:url";
 import { lookalikeCandidates } from "@community-cti/collectors";
 import { foldHomoglyphs, homoglyphVariants } from "./homoglyph.js";
+import { AU_SUFFIXES, brandOf } from "./permutations.js";
 
 export interface WatchedDomain {
   tenantId: string;
@@ -12,7 +14,7 @@ export interface CertMatch {
   tenantId: string;
   watched: string;
   domain: string;
-  reason: "omission" | "swap" | "homoglyph" | "keyword";
+  reason: "omission" | "swap" | "typo" | "homoglyph" | "tld-swap" | "keyword";
 }
 
 interface Entry {
@@ -41,13 +43,22 @@ export function buildMatcher(domains: WatchedDomain[]): LookalikeMatcher {
     for (const variant of homoglyphVariants(domain)) {
       exact.set(variant, { tenantId: item.tenantId, watched: domain, reason: "homoglyph" });
     }
+    // Ending swaps only for a verified registrable domain. A verified subdomain never lends its parent's name.
+    const brand = brandOf(domain);
+    if (brand?.registrable) {
+      for (const ending of AU_SUFFIXES) {
+        const swapped = `${brand.label}.${ending}`;
+        if (ending !== brand.suffix && !exact.has(swapped)) exact.set(swapped, { tenantId: item.tenantId, watched: domain, reason: "tld-swap" });
+      }
+    }
     for (const keyword of item.brandKeywords ?? []) {
       if (keyword.trim().length >= 4) keywords.push({ tenantId: item.tenantId, watched: domain, keyword: keyword.toLowerCase() });
     }
   }
   return {
     match(name: string): CertMatch[] {
-      const domain = name.toLowerCase().replace(/^\*\./, "").replace(/\.$/, "");
+      const ascii = name.trim().toLowerCase().replace(/^\*\./, "").replace(/\.$/, "");
+      const domain = ascii.includes("xn--") ? domainToUnicode(ascii) || ascii : ascii;
       const hits: CertMatch[] = [];
       const direct = exact.get(domain);
       if (direct) hits.push({ ...direct, domain });
@@ -58,7 +69,7 @@ export function buildMatcher(domains: WatchedDomain[]): LookalikeMatcher {
       const label = domain.split(".")[0] ?? "";
       for (const keyword of keywords) {
         if (domain === keyword.watched) continue;
-        if (label.includes(keyword.keyword) && !hits.some((hit) => hit.watched === keyword.watched && hit.reason === "keyword")) {
+        if (label.includes(keyword.keyword) && !hits.some((hit) => hit.watched === keyword.watched)) {
           hits.push({ tenantId: keyword.tenantId, watched: keyword.watched, domain, reason: "keyword" });
         }
       }

@@ -1,6 +1,7 @@
 export { buildMatcher, type CertMatch, type LookalikeMatcher, type WatchedDomain } from "./lookalike/matcher.js";
-export { foldHomoglyphs } from "./lookalike/homoglyph.js";
-export { isPrivateAddress, safeFetch, type SafeFetchResult } from "./enrich/ssrf.js";
+export { foldHomoglyphs, homoglyphVariants } from "./lookalike/homoglyph.js";
+export { permutations, splitDomain, brandOf, AU_SUFFIXES, DEFAULT_PERMUTATION_LIMIT, type Permutation, type PermutationReason } from "./lookalike/permutations.js";
+export { isPrivateAddress, pinnedLookup, pinnedTransport, safeFetch, systemResolver, type FetchLike, type Resolver, type SafeFetchResult } from "./enrich/ssrf.js";
 export { enrichDomain, enrichmentAllowed, isParked, type Enrichment } from "./enrich/enrich.js";
 export { mmh3 } from "./enrich/mmh3.js";
 export { scoreLookalike, scoreRansomware, jaroWinkler, type LookalikeSignals, type Score } from "./match/score.js";

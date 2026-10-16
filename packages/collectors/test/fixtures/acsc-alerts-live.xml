@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://www.cyber.gov.au/">
+  <channel>
+    <title>ASD's ACSC - Alerts RSS</title>
+    <link>https://www.cyber.gov.au/</link>
+    <description>ACSC - Recent Alerts</description>
+    <language>en</language>
+    
+    <item>
+  <title>Protecting operational technology and edge devices</title>
+  <link>https://www.cyber.gov.au/alert/protecting-operational-technology-and-edge-devices</link>
+  <description>Alert on the cyber security risks to operational technology (OT), including refrigeration and cooling technology, with mitigation advice and guidance for businesses and organisations that operate this technology.</description>
+  <pubDate>Wed, 14 Oct 2026 13:17:37 +1100</pubDate>
+    <dc:creator>Australian Cyber Security Centre (ACSC)</dc:creator>
+    <guid isPermaLink="true">https://www.cyber.gov.au/alert/protecting-operational-technology-and-edge-devices</guid>
+    </item><item>
+  <title>Critical vulnerabilities in Citrix NetScaler ADC and Citrix NetScaler Gateway products</title>
+  <link>https://www.cyber.gov.au/alert/critical-vulnerabilities-in-citrix-netscaler-adc-and-citrix-netscaler-gateway-products</link>
+  <description>Alert for organisations to implement a high-priority patch addressing new vulnerabilities, under active exploitation in Citrix NetScaler ADC and Citrix NetScaler Gateway products.</description>
+  <pubDate>Thu, 01 Oct 2026 10:39:24 +1000</pubDate>
+    <dc:creator>Australian Cyber Security Centre (ACSC)</dc:creator>
+    <guid isPermaLink="true">https://www.cyber.gov.au/alert/critical-vulnerabilities-in-citrix-netscaler-adc-and-citrix-netscaler-gateway-products</guid>
+    </item><item>
+  <title>Risks of AI misalignment to Australian organisations</title>
+  <link>https://www.cyber.gov.au/alert/risks-of-ai-misalignment-to-australian-organisations</link>
+  <description>Alert on the risks of AI misalignment to Australian organisations, with mitigation advice and guidance on secure AI practices for organisations.</description>
+  <pubDate>Fri, 25 Sep 2026 09:43:51 +1000</pubDate>
+    <dc:creator>Australian Cyber Security Centre (ACSC)</dc:creator>
+    <guid isPermaLink="true">https://www.cyber.gov.au/alert/risks-of-ai-misalignment-to-australian-organisations</guid>
+    </item>
+  </channel>
+</rss>

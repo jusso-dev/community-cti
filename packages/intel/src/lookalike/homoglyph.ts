@@ -8,6 +8,7 @@ const FOLD: Record<string, string> = {
   "7": "t",
   "8": "b",
   "9": "g",
+  q: "g",
   "а": "a",
   "е": "e",
   "о": "o",

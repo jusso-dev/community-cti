@@ -161,6 +161,18 @@ pnpm eval
 pnpm metrics:pilot
 ```
 
+### Homelab test deployment
+
+`infra/homelab/` runs the whole stack (Postgres, API, portal, worker, Mailpit) from one image built on the homelab host. Only the portal (`:3330`) and the Mailpit inbox (`:18084`) are published, on the LAN and tailnet only. Secrets are generated on the host into a mode-600 `.env` on first deploy.
+
+```bash
+bash infra/homelab/deploy.sh                      # sync, build, start
+SERVICES="worker" bash infra/homelab/deploy.sh    # redeploy one service
+node scripts/smoke-homelab.mjs                    # end-to-end checks through the portal and Mailpit
+```
+
+`TEST_APPROVED_SOURCES` in the host `.env` lets candidate feeds run before their licence review. The worker refuses it when `CTI_ENV=production`. To run single worker jobs, see `apps/worker/README.md` (`WORKER_JOBS`).
+
 CI templates live in [docs/ci/](docs/ci/) until they can be moved into `.github/workflows/`.
 
 ## Roadmap

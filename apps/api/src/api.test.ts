@@ -5,11 +5,12 @@ import type { Server } from "node:http";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { createApp, ROUTES, type AppDeps } from "./app.js";
+import { SinkMailer } from "@community-cti/notify";
 import { hashToken, MemoryStore, type StoredFinding } from "./store.js";
 import { assertPlainCopy, onboardingCopy } from "./copy.js";
 import { applyWeightChanges, proposeWeightChanges } from "./weights.js";
 
-async function listen(deps: AppDeps): Promise<{ server: Server; port: number }> {
+async function listen(deps: AppDeps<MemoryStore>): Promise<{ server: Server; port: number }> {
   const server = createApp(deps);
   await new Promise<void>((resolve) => server.listen(0, resolve));
   return { server, port: (server.address() as { port: number }).port };
@@ -29,19 +30,19 @@ async function call(port: number, method: string, path: string, options: { cooki
   return { status: response.status, json: text ? JSON.parse(text) : {}, cookie: setCookies.join("; ") };
 }
 
-function deps(resolveTxt?: AppDeps["resolveTxt"]): AppDeps {
+function deps(resolveTxt?: AppDeps["resolveTxt"]): AppDeps<MemoryStore> {
   return {
     store: new MemoryStore(),
-    mailer: { sent: [] },
+    mailer: new SinkMailer(),
     now: () => new Date("2026-10-14T00:00:00.000Z"),
     resolveTxt: resolveTxt ?? (async () => []),
   };
 }
 
-async function login(port: number, app: AppDeps, email: string): Promise<string> {
+async function login(port: number, app: AppDeps<MemoryStore>, email: string): Promise<string> {
   const sent = await call(port, "POST", "/auth/magic-link", { body: { email } });
   assert.equal(sent.status, 202);
-  const raw = app.mailer.sent.at(-1)?.text.match(/token=([a-f0-9]+)/)?.[1];
+  const raw = (app.mailer as SinkMailer).sent.at(-1)?.text.match(/token=([a-f0-9]+)/)?.[1];
   assert.ok(raw);
   const back = await call(port, "GET", `/auth/callback?token=${raw}`);
   const token = back.cookie.match(/cti_session=([^;]+)/)?.[1];
@@ -280,11 +281,13 @@ test("isolation: every route is covered and tenant A cannot read tenant B", asyn
       "magic-link": { method: "POST", path: "/auth/magic-link", body: { email: "c@example.org.au" }, status: 202 },
       callback: { method: "GET", path: "/auth/callback?token=missing", status: 400 },
       logout: { method: "POST", path: "/auth/logout", status: 200 },
+      me: { method: "GET", path: "/me", status: 200, absent: orgB.id },
       "verify-email": { method: "GET", path: "/domains/verify-email?token=missing", status: 404 },
       "create-org": { method: "POST", path: "/orgs", body: { name: "Org C", orgType: "other" }, status: 201, absent: orgB.id },
       "get-org": { method: "GET", path: `/orgs/${orgB.id}`, status: 404 },
       invite: { method: "POST", path: `/orgs/${orgB.id}/invites`, body: { email: "x@example.org.au" }, status: 404 },
       consent: { method: "POST", path: `/orgs/${orgB.id}/consents`, body: { scope: "domain_monitoring", grantorName: "A", grantorRole: "owner" }, status: 404 },
+      "revoke-consent": { method: "POST", path: `/orgs/${orgB.id}/consents/revoke`, body: {}, status: 404 },
       "set-role": { method: "POST", path: `/orgs/${orgB.id}/members/${userB.id}/role`, body: { role: "member" }, status: 404 },
       "list-domains": { method: "GET", path: "/domains", status: 200, absent: domainB },
       "create-domain": { method: "POST", path: "/domains", body: { domain: "a.example.org.au" }, status: 409, absent: domainB },
@@ -314,6 +317,8 @@ test("isolation: every route is covered and tenant A cannot read tenant B", asyn
       "notif-get": { method: "GET", path: "/notifications/preferences", status: 200, absent: orgB.id },
       "notif-put": { method: "PUT", path: "/notifications/preferences", body: { mode: "off" }, status: 200, absent: orgB.id },
       cost: { method: "GET", path: "/cost", status: 200, absent: "424242" },
+      advisories: { method: "GET", path: "/advisories", status: 200, absent: orgB.id },
+      "au-ransomware": { method: "GET", path: "/ransomware/au", status: 200, absent: orgB.id },
     };
     for (const route of ROUTES) {
       assert.ok(cases[route.id], `missing isolation test for ${route.id}`);
@@ -327,6 +332,37 @@ test("isolation: every route is covered and tenant A cannot read tenant B", asyn
       assert.equal(response.status, item.status, route.id);
       if (item.absent) assert.equal(JSON.stringify(response.json).includes(item.absent), false, route.id);
     }
+  } finally {
+    live.server.close();
+  }
+});
+
+test("advisories are ranked for the organisation and ransomware is summarised without names", async () => {
+  const app = deps();
+  app.now = () => new Date("2026-10-14T00:00:00.000Z");
+  const live = await listen(app);
+  try {
+    const cookie = await login(live.port, app, "owner@example.org.au");
+    await call(live.port, "POST", "/orgs", { cookie, body: { name: "Example AMS", orgType: "AMS" } });
+    const base = { cves: [], licence: "CC BY 4.0", url: "https://www.cyber.gov.au/alert/x", summary: "s" };
+    app.store.advisories.push(
+      { ...base, id: "1", sourceId: "cisa-advisories", title: "US water ICS", publishedAt: "2026-10-10T00:00:00Z", tags: ["CRITICAL_INFRASTRUCTURE"], attackTechniques: [] },
+      { ...base, id: "2", sourceId: "acsc-alerts", title: "Patch Fortinet", publishedAt: "2026-10-12T00:00:00Z", tags: ["AUSTRALIA"], attackTechniques: ["T1190"] },
+      { ...base, id: "3", sourceId: "acsc-alerts", title: "Ransomware hits health", publishedAt: "2026-10-01T00:00:00Z", tags: ["AUSTRALIA", "HEALTHCARE"], attackTechniques: ["T1486"] },
+      { ...base, id: "4", sourceId: "acsc-alerts", title: "Old", publishedAt: "2026-01-01T00:00:00Z", tags: ["AUSTRALIA"], attackTechniques: [] },
+    );
+    const ranked = await call(live.port, "GET", "/advisories", { cookie });
+    assert.deepEqual(ranked.json.map((item: { id: string }) => item.id), ["3", "2"]);
+    assert.ok(ranked.json[0].reasons.some((reason: string) => reason.includes("health services")));
+    app.store.auVictims.push(
+      { activity: "Healthcare", groupName: "groupx", discoveredAt: "2026-10-01T00:00:00Z" },
+      { activity: "Manufacturing", groupName: "groupy", discoveredAt: "2026-09-01T00:00:00Z" },
+      { activity: "Healthcare", groupName: "groupx", discoveredAt: "2025-01-01T00:00:00Z" },
+    );
+    const summary = await call(live.port, "GET", "/ransomware/au", { cookie });
+    assert.equal(summary.json.total, 2);
+    assert.equal(summary.json.similarSectors, 1);
+    assert.equal(summary.json.groups[0].name, "groupx");
   } finally {
     live.server.close();
   }
